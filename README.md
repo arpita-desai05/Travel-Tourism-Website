@@ -1,6 +1,6 @@
 # 🌍 Travel & Tourism Website
 
-A responsive Travel & Tourism website built using **HTML5, CSS3, and JavaScript**. This project was developed as part of my Diploma in Computer Engineering to demonstrate front-end web development skills.
+A responsive Travel & Tourism website built using **HTML, CSS, and JavaScript**. This project was developed as part of my Diploma in Information Technology to demonstrate front-end web development skills.
 
 ## ✨ Features
 
@@ -36,16 +36,18 @@ README.md
 ## 📸 Project Screenshots
 
 ### Home Page
-![Home](screenshots/home.png)
+![Home](screenshots/Home page1.png)
+![Home](screenshots/Home page 2.png)
+![Home](screenshots/Home page 3.png)
 
 ### Packages Page
-![Packages](screenshots/packages.png)
+![Packages](screenshots/packages page.png)
 
 ### Booking Page
-![Booking](screenshots/booking.png)
+![Booking](screenshots/Booking.png)
 
 ### Login Page
-![Login](screenshots/login.png)
+![Login](screenshots/Login.png)
 
 
 ## 👩‍💻 Author
