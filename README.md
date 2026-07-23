@@ -35,19 +35,27 @@ README.md
 
 ## 📸 Project Screenshots
 
+## 📸 Project Screenshots
+
 ### Home Page
-![Home](screenshots/Home page1.png)
-![Home](screenshots/Home page 2.png)
-![Home](screenshots/Home page 3.png)
+
+![Home 1](screenshots/Home%20page1.PNG)
+
+![Home 2](screenshots/home%20page%202.PNG)
+
+![Home 3](screenshots/Home%20page%203.PNG)
 
 ### Packages Page
-![Packages](screenshots/packages page.png)
+
+![Packages](screenshots/Packages%20page.PNG)
 
 ### Booking Page
-![Booking](screenshots/Booking.png)
+
+![Booking](screenshots/Booking.PNG)
 
 ### Login Page
-![Login](screenshots/Login.png)
+
+![Login](screenshots/Login.PNG)
 
 
 ## 👩‍💻 Author
