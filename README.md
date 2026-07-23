@@ -35,8 +35,6 @@ README.md
 
 ## 📸 Project Screenshots
 
-## 📸 Project Screenshots
-
 ### Home Page
 
 ![Home 1](screenshots/Home%20page1.PNG)
