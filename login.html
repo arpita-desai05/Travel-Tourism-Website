@@ -1,0 +1,217 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background with blur effect */
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Background image with blur applied */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('e2.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(5px);
+            z-index: -1; /* Ensure it stays behind the form */
+        }
+
+        /* Form container */
+        .register-form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            width: 400px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1; /* Make sure it’s on top */
+            position: relative;
+        }
+
+        .register-form-container h3 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Form inputs */
+        .box {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.6rem 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .box:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Error messages */
+        small {
+            display: block;
+            color: #ff4d4d;
+            font-size: 0.85rem;
+            text-align: left;
+            margin: 0.2rem 0 0.5rem 0;
+        }
+
+        /* Submit and Reset buttons */
+        .btn {
+            width: 100%;
+            padding: 0.9rem;
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Navigation buttons */
+        button[type="button"] {
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            color: #007bff;
+            background: none;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        button[type="button"]:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Checkbox and terms */
+        label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="register-form-container">
+    <h3>Register</h3>
+    <form id="registerForm" onsubmit="return validateForm()">
+        <input type="text" id="name" class="box" placeholder="Enter your name">
+        <small id="nameWarning" style="display:none;">Please enter your name.</small>
+        
+        <input type="email" id="email" class="box" placeholder="Enter your email">
+        <small id="emailWarning" style="display:none;">Please enter a valid email address.</small>
+        
+        <input type="password" id="password" class="box" placeholder="Enter your password">
+        <small id="passwordWarning" style="display:none;">Password must be at least 8 characters and include a number.</small>
+        
+        <input type="checkbox" id="terms">
+        <label for="terms">I accept the <a href="#">terms and conditions</a></label>
+        <small id="termsWarning" style="display:none;">You must accept the terms.</small>
+        
+        <input type="submit" value="Register Now" class="btn">
+        <input type="reset" value="Reset" class="btn">
+        
+        <br><br>
+        <button type="button" onclick="backward1()">Back</button>
+        <button type="button" onclick="forward1()">Forward</button>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        let isValid = true;
+
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const terms = document.getElementById('terms');
+        
+        const nameWarning = document.getElementById('nameWarning');
+        const emailWarning = document.getElementById('emailWarning');
+        const passwordWarning = document.getElementById('passwordWarning');
+        const termsWarning = document.getElementById('termsWarning');
+     
+        if (name.value.trim() === "") {
+            nameWarning.style.display = "block";
+            isValid = false;
+        } else {
+            nameWarning.style.display = "none";
+        }
+
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!emailPattern.test(email.value)) {
+            emailWarning.style.display = "block";
+            isValid = false;
+        } else {
+            emailWarning.style.display = "none";
+        }
+
+        const passwordPattern = /^(?=.*\d).{8,}$/;
+        if (!passwordPattern.test(password.value)) {
+            passwordWarning.style.display = "block";
+            isValid = false;
+        } else {
+            passwordWarning.style.display = "none";
+        }
+
+        if (!terms.checked) {
+            termsWarning.style.display = "block";
+            isValid = false;
+        } else {
+            termsWarning.style.display = "none";
+        }
+
+        return isValid;
+    }
+
+  function backward1() {
+        window.location.href = 'hello.html';  // Directs to hello.html for Back button
+    }
+
+    function forward1() {
+        window.location.href = 'hello.html';  // Directs to hello.html for Forward button
+    }
+</script>
+
+</body>
+</html>

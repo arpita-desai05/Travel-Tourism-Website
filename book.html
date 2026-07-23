@@ -1,0 +1,189 @@
+ 
+<html>
+<head>
+<title>Booking Form</title>
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+}
+
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: pink;
+}
+
+.book {
+width: 800px;
+padding: 2rem;
+display: flex;
+justify-content: space-between;
+background-color: #fff;
+border-radius: 0.5rem;
+box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+background: var(--dark-bg);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1.5rem 5%;
+}
+
+header .logo {
+font-size: 2.5rem;
+font-weight: bolder;
+color: var(--text-color);
+text-transform: uppercase;
+}
+
+header .logo span {
+color: var(--orange);
+}
+
+header .navbar a {
+color: var(--text-color);
+font-size: 1.1rem;
+margin: 0 1rem;
+padding: 0.5rem 1rem;
+text-decoration: none;
+border-radius: 5px;
+transition: background 0.3s ease, color 0.3s ease;
+}
+
+header .navbar a:hover {
+background-color: #444;
+color: var(--orange);
+}
+
+.heading {
+text-align: center;
+font-size: 2rem;
+margin-bottom: 1.5rem;
+color: #FFC107;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 0.2rem;
+}
+
+.heading span {
+display: inline-block;
+margin: 0 0.1rem;
+}
+
+.image {
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.image img {
+max-width: 100%;
+border-radius: 0.5rem;
+}
+
+.form-container {
+flex: 1;
+padding: 1rem 2rem;
+}
+
+form {
+width: 100%;
+}
+
+.inputBox {
+margin-bottom: 1rem;
+}
+
+.inputBox h3 {
+font-size: 1.2rem;
+color: #333;
+margin-bottom: 0.5rem;
+}
+
+.inputBox input {
+width: 100%;
+padding: 0.8rem;
+font-size: 1rem;
+border: 1px solid #ddd;
+border-radius: 0.3rem;
+color: #333;
+}
+
+.btn {
+display: inline-block;
+width: 100%;
+padding: 0.8rem;
+font-size: 1.1rem;
+color: #fff;
+background-color: #FFC107;
+border: none;
+border-radius: 0.3rem;
+cursor: pointer;
+text-align: center;
+font-weight: bold;
+}
+
+.btn:hover {
+background-color: #ffa000;
+}
+</style>
+</head>
+<body>
+<section class="book" id="book">
+<div class="form-container">
+<h1 class="heading">
+<span>B</span>
+<span>O</span>
+<span>O</span>
+<span>K</span>
+<span style="width: 1rem;"></span>
+<span>N</span>
+<span>O</span>
+<span>W</span>
+</h1>
+<form id="bookingForm">
+<div class="inputBox">
+<h3>Where To</h3>
+<input type="text" name="destination" placeholder="Place name" required>
+</div>
+<div class="inputBox">
+<h3>How Many</h3>
+<input type="number" name="guests" placeholder="Number of guests" required>
+</div>
+<div class="inputBox">
+<h3>Arrivals</h3>
+<input type="date" name="arrival" required>
+</div>
+<div class="inputBox">
+<h3>Leaving</h3>
+<input type="date" name="departure" required>
+</div>
+<input type="submit" class="btn" value="Book Now">
+</form>
+</div>
+<div class="image">
+<img src="image.jpeg" alt="Travel Image">
+</div>
+</section>
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(event) {
+event.preventDefault(); // Prevent the default form submission
+// Here, you can add any validation or processing logic if needed
+window.location.href = 'hello.html'; // Redirect after form submission
+});
+</script>
+</body>
+</html>

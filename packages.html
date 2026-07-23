@@ -1,0 +1,348 @@
+
+<html>
+<head>
+    <title>Travel and Tour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --orange: #FFA500;
+            --dark-bg: #333;
+            --text-color: #fff;
+            --highlight-color: #e74c3c;
+        }
+
+        body, html {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--dark-bg);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 5%;
+        }
+
+        header .logo {
+            font-size: 2.5rem;
+            font-weight: bolder;
+            color: var(--text-color);
+            text-transform: uppercase;
+        }
+
+        header .logo span {
+            color: var(--orange);
+        }
+
+        header .navbar a {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        header .navbar a:hover {
+            background-color: #444;
+            color: var(--orange);
+        }
+
+        
+        .packages {
+            padding: 5rem 0;
+        }
+
+        .packages h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        .packages .box-container {
+            display: flex;
+            justify-content: center;  
+            flex-wrap: wrap;  
+            gap: 2rem; 
+        }
+
+        .packages .box-container .box {
+            flex: 1 1 calc(33.333% - 2rem);  
+            border-radius: .5rem;
+            overflow: hidden;
+            box-sizing: border-box;
+            background: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .packages .box-container .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .packages .box-container .box img {
+            height: 200px;  
+            width: 100%;
+            object-fit: cover;  
+            border-bottom: 5px solid var(--orange);
+        }
+
+        .packages .box-container .box .content {
+            padding: 2rem;
+        }
+
+        .packages .box-container .box .content h3 {
+            font-size: 1.5rem;  
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .packages .box-container .box .content h3 i {
+            color: var(--orange);
+        }
+
+        .packages .box-container .box .content p {
+            font-size: 1.2rem;  
+            color: #666;
+            padding: 1rem 0;
+        }
+
+        .packages .box-container .box .content .stars i {
+            font-size: 1.5rem;  
+            color: var(--orange);
+        }
+
+        .packages .box-container .box .content .price {
+            font-size: 1.5rem;  
+            color: #333;
+            padding-top: 1rem;
+        }
+
+        .packages .box-container .box .content .price span {
+            color: #666;
+            font-size: 1rem;  
+            text-decoration: line-through;
+        }
+
+        .packages .box-container .box .content .btn {
+            display: inline-block;  
+            padding: 0.7rem 1.5rem;  
+            font-size: 1.1rem; 
+            color: #fff;  
+            background-color: var(--orange);  
+            border: none; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            transition: background-color 0.3s, transform 0.3s; 
+        }
+
+        .packages .box-container .box .content .btn:hover {
+            background-color: #e67e22;  
+            transform: translateY(-2px);  
+        }
+
+         
+        .footer {
+            background-color: #333;  
+            color: #fff;  
+            padding: 2rem 5%; 
+            text-align: center;  
+        }
+
+        .footer-content {
+            max-width: 800px;  
+            margin: 0 auto; 
+        }
+
+        .footer h3 {
+            margin: 1rem 0;  
+            font-size: 1.5rem;  
+            color: #FFA500; 
+        }
+
+        .footer p {
+            margin-bottom: 1rem;  
+            font-size: 1rem;  
+            line-height: 1.5; 
+        }
+
+        .footer .socials {
+            margin: 1rem 0;  
+        }
+
+        .footer .socials a {
+            color: #fff;  
+            margin: 0 10px;  
+            font-size: 1.5rem;  
+            transition: color 0.3s;  
+        }
+
+        .footer .socials a:hover {
+            color: #FFA500;  
+        }
+
+        .credit {
+            margin-top: 1rem; 
+            font-size: 0.9rem; 
+            color: #ccc;  
+        }
+    </style>
+</head>
+<body onload="startSlideshow()">
+
+<header>
+    <a href="#" class="logo"><span>T</span>ravel</a>
+    <nav class="navbar">
+        <a href="hello.html">Home</a>
+        <a href="book.html">Book</a>
+        <a href="#packages">Packages</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
+</header>
+
+ <!------package-->
+<section class="packages" id="packages">
+    <h1 class="heading">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>     
+    </h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="img1.jpeg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Mumbai</h3>
+                <p>Where every street tells a story.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">$90.00 <span>$120.00</span></div>
+                <a href="book.html" class="btn">Book Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="img2.jpeg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Sydney</h3>
+                <p>The iconic city with unmatched coastal beauty.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">$90.00 <span>$120.00</span></div>
+                <a href="book.html" class="btn">Book Now</a> 
+            </div>
+        </div>
+        <div class="box">
+            <img src="img3.jpeg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Paris</h3>
+                <p>Feel the romance and charm of the City of Light.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">$90.00 <span>$120.00</span></div>
+                <a href="book.html" class="btn">Book Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="img4.jpeg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Tokyo</h3>
+                <p>A dynamic fusion of tradition and innovation.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">$90.00 <span>$120.00</span></div>
+                <a href="book.html" class="btn">Book Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="img5.jpeg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Hawaii</h3>
+                <p>Escape to paradise and explore serene beaches.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">$90.00 <span>$120.00</span></div>
+                <a href="book.html" class="btn">Book Now</a>   
+            </div>
+        </div>
+        <div class="box">
+            <img src="img6.jpeg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Egypt</h3>
+                <p>Journey through history with ancient wonders.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">$90.00 <span>$120.00</span></div>
+                <a href="book.html" class="btn">Book Now</a> 
+            </div>
+        </div>
+    </div>
+    </section>    
+<!--end-->
+
+<section class="footer">
+    <div class="footer-content">
+        <h3>About Us</h3>
+        <p>Welcome to our travel community! We are dedicated to helping you discover unforgettable destinations, experience local cultures, and create memories that last a lifetime.</p>
+
+        <div class="footer-follow">
+            <h3>Follow Us</h3>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <h1 class="credit">Created by <span>Arpita</span> | All rights reserved</h1>
+</section>
+ 
+
+</body>
+</html>

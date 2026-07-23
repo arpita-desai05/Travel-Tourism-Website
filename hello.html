@@ -1,0 +1,274 @@
+ 
+<html>
+<head>
+<title>Travel and Tour</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+:root {
+--orange: #FFA500;
+--dark-bg: #333;
+--text-color: #fff;
+--highlight-color: #e74c3c;
+}
+
+body, html {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+
+header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+background: var(--dark-bg);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1.5rem 5%;
+}
+
+header .logo {
+font-size: 2.5rem;
+font-weight: bolder;
+color: var(--text-color);
+text-transform: uppercase;
+}
+
+header .logo span {
+color: var(--orange);
+}
+
+header .navbar a {
+color: var(--text-color);
+font-size: 1.1rem;
+margin: 0 1rem;
+padding: 0.5rem 1rem;
+text-decoration: none;
+border-radius: 5px;
+transition: background 0.3s ease, color 0.3s ease;
+}
+
+header .navbar a:hover {
+background-color: #444;
+color: var(--orange);
+}
+
+
+.banner {
+position: relative;
+width: 100%;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+
+.banner video {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transform: translate(-50%, -50%);
+z-index: -1;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+
+
+.banner .content {
+color: #fff;
+text-align: center;
+z-index: 1;
+}
+
+.banner h3 {
+font-size: 3rem;
+color: #fff;
+margin: 0;
+text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.banner p {
+font-size: 1.5rem;
+color: #ddd;
+margin-top: 10px;
+text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.extra-content {
+display: flex;
+align-items: center;
+padding: 2rem 5%;
+text-align: left;
+background: #f4f4f4;
+}
+
+.extra-content img {
+width: 300px;
+height: auto;
+margin-right: 2rem;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.extra-content .description {
+font-size: 1.2rem;
+color: #333;
+}
+
+.login button {
+padding: 0.6rem 1.2rem;
+font-size: 1rem;
+background-color: var(--orange);
+border: none;
+border-radius: 5px;
+color: var(--text-color);
+cursor: pointer;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+transition: background 0.3s ease;
+}
+
+.login button:hover {
+background-color: #e69500;
+}
+
+
+.footer {
+background-color: #333;
+color: #fff;
+padding: 2rem 5%;
+text-align: center;
+}
+.footer-content {
+max-width: 800px;
+margin: 0 auto;
+}
+.footer h3 {
+margin: 1rem 0;
+font-size: 1.5rem;
+color: #FFA500;
+}
+
+.footer p {
+margin-bottom: 1rem;
+font-size: 1rem;
+line-height: 1.5;
+}
+
+.footer .socials {
+margin: 1rem 0;
+}
+
+.footer .socials a {
+color: #fff;
+margin: 0 10px;
+font-size: 1.5rem;
+transition: color 0.3s;
+}
+
+.footer .socials a:hover {
+color: #FFA500;
+}
+
+.credit {
+margin-top: 1rem;
+font-size: 0.9rem; /
+color: #ccc;
+}
+</style>
+</head>
+<body onload="startSlideshow()">
+
+<header>
+<a href="#" class="logo"><span>T</span>ravel</a>
+<nav class="navbar">
+<a href="hello.html">Home</a>
+<a href="book.html">Book</a>
+<a href="packages.html">Package</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+</nav>
+</header>
+
+<!-- Banner Section with Slideshow -->
+<div class="banner">
+<div class="content">
+<h3>Adventure is worthwhile</h3>
+<p>Discover new places with us, adventure awaits</p>
+</div>
+
+<!-- Video backgrounds -->
+<video src="v6.mp4" muted loop></video>
+<video src="v5.mp4" muted loop></video>
+<video src="v3.mp4" muted loop></video>
+<video src="v4.mp4" muted loop></video>
+</div>
+
+<hr>
+
+<!-- Extra Content Section -->
+<div class="extra-content">
+<img src="e1.jpeg" alt="Scenic view of mountains">
+<div class="description">
+<h3>Escape to where the mountains meet the sky</h3>
+<p>Embrace the adventure, find your peace, and let nature inspire <br>
+your journey. Discover more with us.</p>
+</div>
+</div>
+
+<!-- Login Section -->
+<div class="login" style="text-align:center; margin: 2rem;">
+<button onclick="login()">Login</button>
+</div>
+
+<!-- Footer Section -->
+<section class="footer">
+<div class="footer-content">
+<h3>About Us</h3>
+<p>Welcome to our travel community! We are dedicated to helping you discover unforgettable destinations, experience local cultures, and create memories that last a lifetime.</p>
+
+<div class="footer-follow">
+<h3>Follow Us</h3>
+<div class="socials">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+</div>
+</div>
+</div>
+<h1 class="credit">Created by <span>Arpita</span> | All rights reserved</h1>
+</section>
+
+
+<script>
+let currentVideoIndex = 0;
+const videos = document.querySelectorAll('.banner video');
+
+function startSlideshow() {
+videos[currentVideoIndex].style.opacity = 1;
+
+setInterval(() => {
+videos[currentVideoIndex].style.opacity = 0;
+currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+videos[currentVideoIndex].style.opacity = 1;
+}, 5000);
+}
+
+function login() {
+const myWindow = window.open("login.html", "Registration Form", "width=400,height=400,top=200,left=200");
+myWindow.focus();
+}
+</script>
+
+</body>
+</html>
